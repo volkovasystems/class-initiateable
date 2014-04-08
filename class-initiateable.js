@@ -3,6 +3,7 @@ try{ var base = window; }catch( error ){ var base = exports; }
 	define( "Initiateable",
 		[
 			"hardenProperty",
+			"hardenAllProperty",
 			"argumentsToArray",
 			"prompt",
 			"arrayContains"
@@ -13,7 +14,7 @@ try{ var base = window; }catch( error ){ var base = exports; }
 				this.executeInitiators.apply( this, parameters );
 			};
 
-			hardenProperty( Initiateable, {
+			hardenAllProperty( Initiateable, {
 				"GLOBAL_SCOPE": "global",
 				"CLASS_SCOPE": "class",
 				"ANCESTRY_SCOPE": "ancestry",
